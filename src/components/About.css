@@ -11,10 +11,10 @@
 
 .about-image-container {
   position: relative;
-  padding: var(--space-md);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px; /* Space for the offset border */
 }
 
 .about-portrait {
@@ -31,15 +31,14 @@
 
 .image-accent-border {
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
   max-width: 400px;
-  height: calc(100% - var(--space-md) * 2);
+  height: auto;
   aspect-ratio: 4/5;
   border: 2px solid var(--color-gold);
   z-index: 1;
-  transform: translate(-40%, -40%); /* Slightly offset but visually centered around the image */
+  /* Shift the border 20px down and 20px right */
+  transform: translate(20px, 20px);
 }
 
 .placeholder-text {
