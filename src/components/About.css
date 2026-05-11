@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* This creates the 10px gap between the photo and the border */
+  padding: 15px; /* This creates the 10px gap between the photo and the border */
   border: 2px solid var(--color-gold); /* This is the golden accent border */
   width: fit-content;
   margin: 0 auto;
