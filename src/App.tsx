@@ -12,7 +12,7 @@ function App() {
     <main className="app-container">
       <nav className="main-nav">
         <div className="container nav-content">
-          <div className="nav-logo">KG</div>
+          <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>KG</div>
           <ul className="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#repertoire">Repertoire</a></li>
