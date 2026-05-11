@@ -50,7 +50,6 @@
   max-height: 85vh; /* Larger but stays within viewport */
   object-fit: contain;
   filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.05));
-  mix-blend-mode: multiply; /* Helps blend with the ivory background */
 }
 
 @media (max-width: 768px) {
