@@ -7,8 +7,8 @@ const reviewsData = [
   { id: 2, name: "Michael Thompson", text: "An absolute professional. The atmosphere Katelyn created at our corporate gala was exactly what we were looking for." },
   { id: 3, name: "Emily Rogers", text: "We requested a custom piece for my daughter's reception and Katelyn learned it perfectly. Highly recommended!" },
   { id: 4, name: "David Wilson", text: "Stunning performance. Her touch on the keys is delicate yet powerful. A true artist." },
-  { id: 5, name: "Hayden L.", text: "I really enjoyed Katelyn's performance. We threw her a few curve balls last minute with some song requests and she adapted very quickly. She didn't demand attention but she set the tone for our event. I strongly recommend her!" },
-  { id: 6, name: "Esther B.", text: "Katelyn is an incredible pianist with impressive talent. She is hard working, professional, very organized, and passionate about her skills. I highly recommend hiring her. You won't regret it!" }
+  { id: 5, name: "Hayden L.", text: "I really enjoyed Katelyn's performance. We threw her a few last minute song requests and she adapted very quickly. She didn't demand attention but she set the tone for our event. I strongly recommend her!" },
+  { id: 6, name: "Esther B.", text: "Katelyn is an incredible pianist with impressive talent. She is hard working, professional, very organized, and passionate about her skills. I highly recommend hiring her!" }
 ];
 
 const Reviews: React.FC = () => {
