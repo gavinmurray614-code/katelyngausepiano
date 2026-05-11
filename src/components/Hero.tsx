@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <div className="hero-decoration">
           {/* High-Resolution Musical Mosaic Treble Clef Image */}
           <img 
-            src="/treble-clef-mosaic.png" 
+            src="/treble-clef-mosaic-transparent.png" 
             alt="Musical Mosaic Treble Clef" 
             className="treble-clef-img"
           />
