@@ -37,7 +37,6 @@ function App() {
         <div className="container footer-content">
           <p>&copy; {new Date().getFullYear()} Katelyn Gause. All Rights Reserved.</p>
           <div className="footer-links">
-            <a href="https://www.instagram.com/katelyngause" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.youtube.com/@katelyngausepiano" target="_blank" rel="noopener noreferrer">YouTube</a>
           </div>
         </div>

@@ -76,6 +76,30 @@
 
 @media (max-width: 600px) {
   .nav-links {
-    display: none;
+    gap: var(--space-sm);
+  }
+  
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+
+  .nav-btn {
+    display: none; /* Hide 'Book Now' in nav on mobile to save space */
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}
+
+section {
+  padding: var(--space-lg) 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--space-md) 0;
   }
 }

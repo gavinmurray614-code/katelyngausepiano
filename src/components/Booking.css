@@ -178,6 +178,14 @@
     grid-template-columns: 1fr;
   }
   
+  .booking-card {
+    padding: var(--space-md);
+  }
+
+  .booking-header h2 {
+    font-size: 2rem;
+  }
+
   .contact-info-footer {
     flex-direction: column;
     gap: 0.5rem;
