@@ -22,6 +22,17 @@
   color: var(--color-black);
 }
 
+@media (max-width: 600px) {
+  .main-pricing {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .main-pricing h3 {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+}
+
 .pricing-details {
   text-align: left;
   margin: var(--space-lg) 0;
