@@ -1,6 +1,6 @@
 import Hero from './components/Hero';
 import About from './components/About';
-import Gallery from './components/Gallery';
+// import Gallery from './components/Gallery';
 import Pricing from './components/Pricing';
 import Reviews from './components/Reviews';
 import Repertoire from './components/Repertoire';
