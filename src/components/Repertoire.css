@@ -1,0 +1,109 @@
+.repertoire {
+  background-color: var(--color-white);
+}
+
+.repertoire-intro {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-charcoal);
+}
+
+.repertoire-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl) var(--space-lg);
+}
+
+.repertoire-category h3 {
+  font-size: 1.2rem;
+  color: var(--color-gold);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.song-list {
+  list-style: none;
+}
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.song-item:last-child {
+  border-bottom: none;
+}
+
+.song-title {
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  padding-right: 1rem;
+}
+
+.play-btn {
+  background: none;
+  border: 1px solid var(--color-gold);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.play-btn svg {
+  width: 18px;
+  height: 18px;
+  margin-left: 2px; /* Slight offset to visually center triangle */
+}
+
+.play-btn.playing svg {
+  margin-left: 0;
+}
+
+.play-btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.play-btn.playing {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.repertoire-footer {
+  margin-top: var(--space-xl);
+  padding: var(--space-md);
+  border: 1px dashed var(--color-gold);
+}
+
+.custom-music-note {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .repertoire-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

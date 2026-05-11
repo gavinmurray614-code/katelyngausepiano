@@ -1,0 +1,90 @@
+.pricing {
+  background-color: var(--color-ivory);
+}
+
+.pricing-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: var(--space-lg);
+}
+
+.main-pricing {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-gold);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.main-pricing h3 {
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-black);
+}
+
+.pricing-details {
+  text-align: left;
+  margin: var(--space-lg) 0;
+}
+
+.pricing-item {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.pricing-item h4 {
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-grid-fees {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.fee-item {
+  background-color: var(--color-ivory);
+  padding: var(--space-md);
+  border-left: 3px solid var(--color-gold);
+  display: flex;
+  flex-direction: column;
+}
+
+.fee-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--color-charcoal);
+}
+
+.fee-value {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0.25rem 0;
+}
+
+.fee-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-charcoal);
+  opacity: 0.8;
+}
+
+.pricing-btn {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .pricing-grid-fees {
+    grid-template-columns: 1fr;
+  }
+}

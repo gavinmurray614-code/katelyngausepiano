@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Colors from Business Card */
+  --color-ivory: #FDFCF8;
+  --color-gold: #D4AF37;
+  --color-gold-muted: #B8952E;
+  --color-charcoal: #333333;
+  --color-black: #1A1A1A;
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-charcoal);
+  background-color: var(--color-ivory);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-gold);
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-gold-muted);
+}
+
+button {
+  border-radius: 0;
+  border: 1px solid var(--color-gold);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  background-color: transparent;
+  color: var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+button:hover {
+  background-color: var(--color-gold);
+  color: var(--color-ivory);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+section {
+  padding: var(--space-lg) 0;
+}
