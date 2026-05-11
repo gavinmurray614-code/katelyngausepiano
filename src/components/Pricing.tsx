@@ -36,7 +36,7 @@ const Pricing: React.FC = () => {
             </div>
 
             <button className="pricing-btn" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
-              Book Katelyn
+              Book Now
             </button>
           </div>
         </div>
