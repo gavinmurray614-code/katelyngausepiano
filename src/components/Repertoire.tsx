@@ -79,9 +79,15 @@ const repertoireData: RepertoireCategory[] = [
 
 const Repertoire: React.FC = () => {
   const [playingAudio, setPlayingAudio] = useState<string | null>(null);
+  const [openCategory, setOpenCategory] = useState<number | null>(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const togglePlay = (audioPath: string) => {
+  const toggleCategory = (idx: number) => {
+    setOpenCategory(openCategory === idx ? null : idx);
+  };
+
+  const togglePlay = (e: React.MouseEvent, audioPath: string) => {
+    e.stopPropagation();
     if (playingAudio === audioPath) {
       audioRef.current?.pause();
       setPlayingAudio(null);
@@ -112,30 +118,35 @@ const Repertoire: React.FC = () => {
         <p className="repertoire-intro centered">
           A curated selection of pieces to set the perfect tone for your event.
         </p>
-        <div className="repertoire-grid">
+        <div className="repertoire-accordion">
           {repertoireData.map((section, idx) => (
-            <div key={idx} className="repertoire-category">
-              <h3>{section.category}</h3>
-              <ul className="song-list">
-                {section.items.map((song, sIdx) => (
-                  <li key={sIdx} className="song-item">
-                    <span className="song-title">{song.title}</span>
-                    {song.audioPath && (
-                      <button 
-                        className={`play-btn ${playingAudio === song.audioPath ? 'playing' : ''}`}
-                        onClick={() => togglePlay(song.audioPath!)}
-                        title={playingAudio === song.audioPath ? "Pause" : "Play Preview"}
-                      >
-                        {playingAudio === song.audioPath ? (
-                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                        ) : (
-                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        )}
-                      </button>
-                    )}
-                  </li>
-                ))}
-              </ul>
+            <div key={idx} className={`accordion-item ${openCategory === idx ? 'active' : ''}`}>
+              <button className="accordion-header" onClick={() => toggleCategory(idx)}>
+                <h3>{section.category}</h3>
+                <span className="accordion-icon">{openCategory === idx ? '−' : '+'}</span>
+              </button>
+              <div className="accordion-content">
+                <ul className="song-list">
+                  {section.items.map((song, sIdx) => (
+                    <li key={sIdx} className="song-item">
+                      <span className="song-title">{song.title}</span>
+                      {song.audioPath && (
+                        <button 
+                          className={`play-btn ${playingAudio === song.audioPath ? 'playing' : ''}`}
+                          onClick={(e) => togglePlay(e, song.audioPath!)}
+                          title={playingAudio === song.audioPath ? "Pause" : "Play Preview"}
+                        >
+                          {playingAudio === song.audioPath ? (
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                          ) : (
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                          )}
+                        </button>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
