@@ -28,9 +28,15 @@ const Pricing: React.FC = () => {
                 </div>
 
                 <div className="fee-item">
-                  <span className="fee-label">Additional Fees</span>
+                  <span className="fee-label">Rush Booking</span>
                   <span className="fee-value">+$50</span>
-                  <p className="fee-desc">Applied for bookings made less than one week in advance or including more than 8 custom music requests.</p>
+                  <p className="fee-desc">For bookings made less than one week in advance.</p>
+                </div>
+
+                <div className="fee-item">
+                  <span className="fee-label">Custom Song Requests</span>
+                  <span className="fee-value">+$20</span>
+                  <p className="fee-desc">For each 2 extra custom songs beyond the 2 included.</p>
                 </div>
               </div>
             </div>
