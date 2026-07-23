@@ -8,7 +8,7 @@ const About: React.FC = () => {
           <div className="about-image-container">
             <img 
               src="/katelyn-4.jpg" 
-              alt="Katelyn Gause - Professional Pianist" 
+              alt="Katelyn Gause - Utah County Wedding & Event Pianist" 
               className="about-portrait"
             />
             <div className="image-accent-border"></div>
@@ -17,7 +17,7 @@ const About: React.FC = () => {
             <h2 className="section-title">Musical Artistry</h2>
             <h3 className="expertise-tag">Piano Performance Major</h3>
             <p className="about-text">
-              With a deep passion for classical and contemporary piano, Katelyn Gause brings a refined touch to every event. Her repertoire spans from timeless classical masterpieces to modern favorites, tailored to create the perfect atmosphere for your special day.
+              With a deep passion for classical and contemporary piano, Katelyn Gause brings a refined touch to every event across Utah County. Based in Utah Valley, her repertoire spans from timeless classical masterpieces to modern favorites, tailored to create the perfect atmosphere for your special day.
             </p>
             <div className="experience-stats">
               <div className="stat-item">
