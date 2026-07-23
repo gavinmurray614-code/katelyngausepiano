@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       <div className="container hero-content">
         <div className="hero-text">
           <h1>Katelyn Gause</h1>
-          <h2>Wedding & Event Pianist</h2>
+          <h2>Utah Wedding & Event Pianist</h2>
           <p className="hero-description">
             Elegant live piano for weddings, receptions, and special events.
           </p>

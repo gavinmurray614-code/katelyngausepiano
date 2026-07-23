@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 // import Gallery from './components/Gallery';
@@ -8,6 +9,25 @@ import Booking from './components/Booking';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const handleInitialScroll = () => {
+      const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
+      const hash = window.location.hash.toLowerCase();
+
+      const bookingPaths = ['/booking', '/inquire', '/contact', '/book', '/availability', '/reserve'];
+
+      if (bookingPaths.includes(path) || hash === '#booking' || hash === '#inquire' || hash === '#contact') {
+        const bookingSection = document.getElementById('booking');
+        if (bookingSection) {
+          bookingSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Run on initial mount
+    handleInitialScroll();
+  }, []);
+
   return (
     <main className="app-container">
       <nav className="main-nav">
